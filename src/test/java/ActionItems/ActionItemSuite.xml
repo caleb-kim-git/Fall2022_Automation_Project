@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="ActionItem_6">
+    <test name="Truist Bank Scenarios" preserve-order="true">
+        <classes>
+            <class name="ActionItems.ActionItem_6_NoUserInputs"/>
+            <class name="ActionItems.ActionItem_6_UserInputs"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
