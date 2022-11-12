@@ -17,7 +17,7 @@ public class T2_StringComparison extends Reusable_Annotations {
         //get page title
         String actualTitle = driver.getTitle();
         if (actualTitle.equals(expectedTitle)) {
-            logger.log(LogStatus.PASS, "Expected Result matches Actual Result");
+            logger.log(LogStatus.PASS, "Expected Result matches Actual Result!");
         } else {
             logger.log(LogStatus.FAIL, "Expected Result does not match Actual Result");
         }
