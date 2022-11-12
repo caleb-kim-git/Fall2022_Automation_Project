@@ -29,6 +29,7 @@ public class T2_StringComparison extends Reusable_Annotations {
         //first navigate to yahoo homepage
         driver.navigate().to("https://www.yahoo.com/");
         //define our expected string variable
+        //!!!
         String actualYahooSignInButtonText = Reusable_Actions_Loggers.getTextAction(driver, "//*[@class = '_yb_18vjf']", logger, "Sign In");
         //define expected string text
         String expectedYahooSignInButtonText = "Sign In";
