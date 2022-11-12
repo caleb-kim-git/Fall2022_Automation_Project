@@ -19,7 +19,7 @@ public class T2_StringComparison extends Reusable_Annotations {
         if (actualTitle.equals(expectedTitle)) {
             logger.log(LogStatus.PASS, "Expected Result matches Actual Result!!");
         } else {
-            logger.log(LogStatus.FAIL, "Expected Result does not match Actual Result");
+            logger.log(LogStatus.FAIL, "Expected Result does not match Actual Result!");
         }
     }//end of test 1
 
