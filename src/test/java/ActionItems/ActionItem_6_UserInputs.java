@@ -36,7 +36,7 @@ public class ActionItem_6_UserInputs extends Reusable_Annotations {
         //for loop to enter something in each input field
         for (int i =0; i<inputValues.size();i++){
             //enter inputs in corresponding input fields
-            Reusable_Actions_Loggers.sendKeysActionByIndex(driver,"//*[@class='lf-input-comma']",inputValues.get(i),i,logger,"Calculator Input Fields");
+            Reusable_Actions_Loggers.clearAndSendKeysActionByIndex(driver,"//*[@class='lf-input-comma']",inputValues.get(i),i,logger,"Calculator Input Fields");
             //click on the chart to update the results
             if (i == (inputValues.size()-1)){
                 Reusable_Actions_Loggers.clickAction(driver,"//*[@class='highcharts-root']",logger,"Chart");
@@ -77,7 +77,7 @@ public class ActionItem_6_UserInputs extends Reusable_Annotations {
             Reusable_Actions_Loggers.clickActionByIndex(driver,"//*[@class='slds-form-element__control']/span/label",i,logger,"Check Box Appointment");
         }
         //Enter something in the "Other" input field
-        Reusable_Actions_Loggers.sendKeysAction(driver,"//*[@class='slds-input']","Should I declare bankruptcy",logger,"Other Input");
+        Reusable_Actions_Loggers.clearAndSendKeysAction(driver,"//*[@class='slds-input']","Should I declare bankruptcy",logger,"Other Input");
         //Click the "Next" Button
         Reusable_Actions_Loggers.clickAction(driver,"//*[@class='slds-button slds-button_brand']",logger,"Next Button");
         //Click the "Video Conference Option
@@ -85,7 +85,7 @@ public class ActionItem_6_UserInputs extends Reusable_Annotations {
         //Click the "Next" Button
         Reusable_Actions_Loggers.clickAction(driver,"//*[contains(@class,'flow-button__NEXT')]",logger,"Next Button");
         //Enter zipcode into address field
-        Reusable_Actions_Loggers.sendKeysActionByIndex(driver,"//*[@role='combobox']","New Jersey",0,logger,"Address Field");
+        Reusable_Actions_Loggers.clearAndSendKeysActionByIndex(driver,"//*[@role='combobox']","New Jersey",0,logger,"Address Field");
         //Click the first option
         Reusable_Actions_Loggers.clickActionByIndex(driver,"//*[@class='lookup__list  visible']/li",0,logger,"First Location Option");
         //Click "Within" Dropdown

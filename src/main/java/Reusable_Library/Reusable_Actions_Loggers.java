@@ -124,8 +124,6 @@ public class Reusable_Actions_Loggers {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
         try {
             WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(xpath(xpath)));
-            element.sendKeys(Keys.CONTROL, "a");
-            element.sendKeys(Keys.DELETE);
             element.sendKeys(userInput);
             //verify the element is successful
             logger.log(LogStatus.PASS, "Successfully entered a value on " + elementName);
@@ -149,6 +147,36 @@ public class Reusable_Actions_Loggers {
             logger.log(LogStatus.FAIL, "Unable to send keys to: " + elementName + " for reason: " + e);
         }
     }//end of sendKeys action
+
+    public static void clearAndSendKeysAction(WebDriver driver, String xpath, String userInput, ExtentTest logger, String elementName) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(xpath(xpath)));
+            element.sendKeys(Keys.CONTROL, "a");
+            element.sendKeys(Keys.DELETE);
+            element.sendKeys(userInput);
+            //verify the element is successful
+            logger.log(LogStatus.PASS, "Successfully entered a value on " + elementName);
+        } catch (Exception e) {
+            System.out.println("Unable to send keys to: " + elementName + " for reason: " + e);
+            logger.log(LogStatus.FAIL, "Unable to send keys to: " + elementName + " for reason: " + e);
+        }
+    }//end of clear and sendKeys action
+
+    public static void clearAndSendKeysActionByIndex(WebDriver driver, String xpath, String userInput, int index, ExtentTest logger, String elementName) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(xpath(xpath))).get(index);
+            element.sendKeys(Keys.CONTROL, "a");
+            element.sendKeys(Keys.DELETE);
+            element.sendKeys(userInput);
+            //verify the element is successful
+            logger.log(LogStatus.PASS, "Successfully entered a value on " + elementName);
+        } catch (Exception e) {
+            System.out.println("Unable to send keys to: " + elementName + " for reason: " + e);
+            logger.log(LogStatus.FAIL, "Unable to send keys to: " + elementName + " for reason: " + e);
+        }
+    }//end of clear and sendKeys action
 
     public static void clickAndSendKeysAction(WebDriver driver, String xpath, String userInput, ExtentTest logger, String elementName) {
         WebDriverWait wait = new WebDriverWait(driver, timeout);
